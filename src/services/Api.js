@@ -88,8 +88,7 @@ export default {
             const response = await baseApi.put(`/notes/${id}`, note, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            console.log(response)
-            return response
+            return response;
         } catch (error) {
             console.log(error)
             throw new Error(error.response?.data?.message || 'Failed to update note');
@@ -100,7 +99,7 @@ export default {
             const response = await baseApi.delete(`/notes/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            return response.data;
+            return response;
         } catch (error) {
             throw new Error(error.response?.data?.message || 'Failed to delete note');
         }
