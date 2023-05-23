@@ -1,3 +1,3 @@
 [build]
 publish = "dist"
-command = "ionic build"
+command = "npm install -g @ionic/cli && ionic build"
