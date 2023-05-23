@@ -75,7 +75,7 @@ export const useApiStore = defineStore({
         },
         async deleteNotes(id) {
             try {
-                const response = await api.deleteNotes(id);
+                const response = await api.deleteNoteById(id);
                 return response.data.message;
             } catch (error) {
                 throw new Error(error.response?.data?.message || "Failed to delete note");
